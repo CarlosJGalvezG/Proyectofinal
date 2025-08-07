@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias MCU - MCU Universe</title>
+    <meta name="description" content="Las últimas noticias, rumores y actualizaciones del Universo Cinematográfico de Marvel">
+    <meta name="keywords" content="noticias MCU, Marvel, películas, series, rumores, actualizaciones">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-meteor text-danger me-2"></i>
+                <span class="brand-text">MCU Universe</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="news.html">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies.html">Películas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="characters.html">Personajes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fans.html">Zona Fans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="theories.html">Teorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="creators.html">Creadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                </ul>
+                <div class="dark-mode-toggle">
+                    <button id="darkModeToggle" class="btn btn-link text-light">
+                        <i class="fas fa-heart text-danger arc-reactor"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="news-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-3 fw-bold mb-4">
+                        <i class="fas fa-newspaper text-primary me-3"></i>
+                        Noticias MCU
+                    </h1>
+                    <p class="lead">Mantente al día con las últimas noticias, rumores y actualizaciones del Universo Cinematográfico de Marvel</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="news-hero-icon">
+                        📰
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5 pt-5">
+        <!-- Filter Section -->
+        <div class="filter-section mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3>Filtrar Noticias</h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="filter-controls">
+                        <select class="form-select" id="categoryFilter">
+                            <option value="all">Todas las Categorías</option>
+                            <option value="movies">Películas</option>
+                            <option value="series">Series</option>
+                            <option value="rumors">Rumores</option>
+                            <option value="casting">Casting</option>
+                            <option value="releases">Estrenos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured News -->
+        <section class="featured-news mb-5">
+            <h2 class="mb-4">
+                <i class="fas fa-star text-warning me-2"></i>
+                Noticias Destacadas
+            </h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <article class="featured-article">
+                        <div class="article-image">
+                            <div class="placeholder-image">
+                                🎬
+                            </div>
+                            <div class="article-badge">DESTACADO</div>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="category movies">Películas</span>
+                                <span class="date">Hace 2 horas</span>
+                            </div>
+                            <h3>Nuevo Avance de "Los Cuatro Fantásticos" Revela el Primer Vistazo a Galactus</h3>
+                            <p>Marvel Studios ha lanzado un nuevo tráiler que muestra por primera vez al Devorador de Mundos en el MCU, prometiendo una película épica para 2025.</p>
+                            <a href="#" class="btn btn-primary" onclick="readFullArticle('fantastic-four')">Leer Más</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4">
+                    <div class="trending-sidebar">
+                        <h4>
+                            <i class="fas fa-fire text-danger me-2"></i>
+                            Tendencias
+                        </h4>
+                        <div class="trending-item">
+                            <span class="trending-number">1</span>
+                            <div>
+                                <h6>X-Men en el MCU</h6>
+                                <small>Kevin Feige confirma planes</small>
+                            </div>
+                        </div>
+                        <div class="trending-item">
+                            <span class="trending-number">2</span>
+                            <div>
+                                <h6>Spider-Man 4</h6>
+                                <small>Tom Holland regresa</small>
+                            </div>
+                        </div>
+                        <div class="trending-item">
+                            <span class="trending-number">3</span>
+                            <div>
+                                <h6>Deadpool & Wolverine</h6>
+                                <small>Récord de taquilla</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Grid -->
+        <section class="news-grid">
+            <h2 class="mb-4">
+                <i class="fas fa-newspaper text-primary me-2"></i>
+                Últimas Noticias
+            </h2>
+            <div class="row g-4" id="newsContainer">
+                <!-- News articles will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-primary btn-lg" id="loadMoreBtn" onclick="loadMoreNews()">
+                <i class="fas fa-plus me-2"></i>
+                Cargar Más Noticias
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>MCU Universe</h5>
+                    <p>"Juntos somos más fuertes" - Tu comunidad Marvel favorita</p>
+                    <div class="slogan">
+                        <em>"El legado vive para siempre"</em>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Inicio</a></li>
+                        <li><a href="fans.html" class="text-light text-decoration-none">Zona Fans</a></li>
+                        <li><a href="theories.html" class="text-light text-decoration-none">Teorías</a></li>
+                        <li><a href="privacy.html" class="text-light text-decoration-none">Políticas de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank" class="text-light me-3">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-light me-3">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="text-light me-3">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-light me-3">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="text-light">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2024 MCU Universe. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <script>
+        // News data
+        const newsData = [
+            {
+                id: 'spider-man-4',
+                title: 'Tom Holland Confirma Spider-Man 4 para 2025',
+                content: 'El actor británico confirma oficialmente su regreso como el Trepamuros en una nueva aventura que promete conectar con el multiverso.',
+                category: 'movies',
+                date: '2024-08-05',
+                featured: false,
+                timeAgo: 'Hace 1 día'
+            },
+            {
+                id: 'x-men-mcu',
+                title: 'Kevin Feige Revela Planes para los X-Men en el MCU',
+                content: 'El presidente de Marvel Studios habla sobre cómo integrarán a los mutantes en el universo cinematográfico actual.',
+                category: 'rumors',
+                date: '2024-08-04',
+                featured: false,
+                timeAgo: 'Hace 2 días'
+            },
+            {
+                id: 'armor-wars',
+                title: 'Armor Wars Cambiaría de Serie a Película',
+                content: 'Según reportes, el proyecto de Don Cheadle como War Machine podría convertirse en una película en lugar de serie.',
+                category: 'series',
+                date: '2024-08-03',
+                featured: false,
+                timeAgo: 'Hace 3 días'
+            },
+            {
+                id: 'thunderbolts-cast',
+                title: 'Se Revela el Cast Completo de Thunderbolts',
+                content: 'Marvel anuncia oficialmente todos los villanos que formarán parte del equipo antihéroes de la Fase 5.',
+                category: 'casting',
+                date: '2024-08-02',
+                featured: false,
+                timeAgo: 'Hace 4 días'
+            },
+            {
+                id: 'blade-update',
+                title: 'Mahershala Ali Habla sobre los Retrasos de Blade',
+                content: 'El actor que interpretará al cazador de vampiros explica los desafíos de producción y confirma que sigue comprometido.',
+                category: 'movies',
+                date: '2024-08-01',
+                featured: false,
+                timeAgo: 'Hace 5 días'
+            },
+            {
+                id: 'daredevil-series',
+                title: 'Daredevil: Born Again Llegará en 2025',
+                content: 'Disney+ confirma la fecha de estreno de la nueva serie de Matt Murdock con Charlie Cox regresando al papel.',
+                category: 'releases',
+                date: '2024-07-31',
+                featured: false,
+                timeAgo: 'Hace 6 días'
+            }
+        ];
+
+        let currentNewsIndex = 0;
+        const newsPerPage = 3;
+
+        // Load initial news
+        document.addEventListener('DOMContentLoaded', function() {
+            loadNews();
+            
+            // Filter functionality
+            document.getElementById('categoryFilter').addEventListener('change', function() {
+                filterNews(this.value);
+            });
+        });
+
+        function loadNews() {
+            const container = document.getElementById('newsContainer');
+            const endIndex = Math.min(currentNewsIndex + newsPerPage, newsData.length);
+            
+            for (let i = currentNewsIndex; i < endIndex; i++) {
+                const article = createNewsCard(newsData[i]);
+                container.appendChild(article);
+            }
+            
+            currentNewsIndex = endIndex;
+            
+            // Hide load more button if all news loaded
+            if (currentNewsIndex >= newsData.length) {
+                document.getElementById('loadMoreBtn').style.display = 'none';
+            }
+        }
+
+        function createNewsCard(article) {
+            const col = document.createElement('div');
+            col.className = 'col-md-6 col-lg-4';
+            col.setAttribute('data-category', article.category);
+            
+            col.innerHTML = `
+                <article class="news-card h-100">
+                    <div class="news-image">
+                        <div class="placeholder-image">
+                            ${getCategoryIcon(article.category)}
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="category ${article.category}">${getCategoryName(article.category)}</span>
+                            <span class="date">${article.timeAgo}</span>
+                        </div>
+                        <h5>${article.title}</h5>
+                        <p>${article.content}</p>
+                        <div class="news-actions">
+                            <button class="btn btn-outline-primary btn-sm" onclick="readFullArticle('${article.id}')">
+                                Leer Más
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="shareArticle('${article.id}')">
+                                <i class="fas fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            `;
+            
+            return col;
+        }
+
+        function getCategoryIcon(category) {
+            const icons = {
+                'movies': '🎬',
+                'series': '📺',
+                'rumors': '🤔',
+                'casting': '🎭',
+                'releases': '📅'
+            };
+            return icons[category] || '📰';
+        }
+
+        function getCategoryName(category) {
+            const names = {
+                'movies': 'Películas',
+                'series': 'Series',
+                'rumors': 'Rumores',
+                'casting': 'Casting',
+                'releases': 'Estrenos'
+            };
+            return names[category] || 'General';
+        }
+
+        function loadMoreNews() {
+            loadNews();
+        }
+
+        function filterNews(category) {
+            const articles = document.querySelectorAll('#newsContainer > div');
+            
+            articles.forEach(article => {
+                if (category === 'all' || article.getAttribute('data-category') === category) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+
+        function readFullArticle(articleId) {
+            const article = newsData.find(a => a.id === articleId) || { title: 'Artículo Destacado', content: 'Contenido completo del artículo...' };
+            
+            Swal.fire({
+                title: article.title,
+                html: `
+                    <div class="text-start">
+                        <div class="mb-3">
+                            <span class="badge bg-primary">${getCategoryName(article.category || 'movies')}</span>
+                            <small class="text-muted ms-2">${article.timeAgo || 'Hace 2 horas'}</small>
+                        </div>
+                        <p>${article.content}</p>
+                        <p>Este es solo un ejemplo del contenido completo. En una implementación real, aquí se mostraría el artículo completo con imágenes, videos y más detalles sobre la noticia del MCU.</p>
+                        <div class="mt-3">
+                            <button class="btn btn-primary btn-sm me-2" onclick="likeArticle('${articleId}')">
+                                <i class="fas fa-heart"></i> Me Gusta
+                            </button>
+                            <button class="btn btn-success btn-sm" onclick="shareArticle('${articleId}')">
+                                <i class="fas fa-share"></i> Compartir
+                            </button>
+                        </div>
+                    </div>
+                `,
+                showCloseButton: true,
+                showConfirmButton: false,
+                background: '#1a1a1a',
+                color: '#ffffff',
+                width: '800px'
+            });
+        }
+
+        function shareArticle(articleId) {
+            const article = newsData.find(a => a.id === articleId) || { title: 'Noticia MCU' };
+            const shareText = `¡Mira esta noticia del MCU! "${article.title}" en MCU Universe`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: article.title,
+                    text: shareText,
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(shareText + ' - ' + window.location.href);
+                showNotification('Enlace copiado al portapapeles', 'success');
+            }
+        }
+
+        function likeArticle(articleId) {
+            showNotification('¡Te gusta esta noticia!', 'success');
+        }
+    </script>
+
+    <style>
+        .news-hero {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-blue) 100%);
+            padding: 8rem 0 4rem;
+            margin-top: 76px;
+        }
+
+        .news-hero-icon {
+            font-size: 8rem;
+            opacity: 0.8;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .filter-section {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .featured-article {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .featured-article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .article-image {
+            height: 200px;
+            background: linear-gradient(45deg, var(--primary-red), var(--primary-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+        }
+
+        .article-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary-gold);
+            color: var(--darker-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .article-content {
+            padding: 2rem;
+        }
+
+        .article-meta {
+            margin-bottom: 1rem;
+        }
+
+        .category {
+            background: var(--primary-red);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 1rem;
+        }
+
+        .category.movies { background: #e23636; }
+        .category.series { background: #1e40af; }
+        .category.rumors { background: #f59e0b; color: #000; }
+        .category.casting { background: #10b981; }
+        .category.releases { background: #8b5cf6; }
+
+        .date {
+            color: var(--gray-text);
+            font-size: 0.9rem;
+        }
+
+        .trending-sidebar {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: fit-content;
+        }
+
+        .trending-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .trending-item:last-child {
+            border-bottom: none;
+        }
+
+        .trending-number {
+            background: var(--primary-red);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .news-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .news-image {
+            height: 150px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--primary-red));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .placeholder-image {
+            opacity: 0.8;
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .news-meta {
+            margin-bottom: 1rem;
+        }
+
+        .news-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        #loadMoreBtn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</body>
+</html>

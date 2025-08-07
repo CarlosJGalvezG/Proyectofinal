@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Fans - MCU Universe</title>
+    <meta name="description" content="Zona exclusiva para fans del MCU con quiz interactivos, comparaciones de personajes y rankings épicos">
+    <meta name="keywords" content="quiz MCU, comparar personajes Marvel, ranking superhéroes, fans MCU">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-meteor text-danger me-2"></i>
+                <span class="brand-text">MCU Universe</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies.html">Películas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="characters.html">Personajes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="fans.html">Zona Fans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="theories.html">Teorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="creators.html">Creadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                </ul>
+                <div class="dark-mode-toggle">
+                    <button id="darkModeToggle" class="btn btn-link text-light">
+                        <i class="fas fa-heart text-danger arc-reactor"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="fans-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-3 fw-bold mb-4">
+                        <i class="fas fa-users text-primary me-3"></i>
+                        Zona Fans
+                    </h1>
+                    <p class="lead">"Soy Iron Man" - Demuestra tu conocimiento del MCU y compara a tus héroes favoritos</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="fans-hero-icons">
+                        🦾 🛡️ 🔨 🕷️ 💚
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5 pt-5">
+        <!-- Navigation Tabs -->
+        <div class="fans-navigation mb-5">
+            <nav>
+                <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-quiz-tab" data-bs-toggle="tab" data-bs-target="#nav-quiz" type="button" role="tab">
+                        <i class="fas fa-brain me-2"></i>Quiz MCU
+                    </button>
+                    <button class="nav-link" id="nav-compare-tab" data-bs-toggle="tab" data-bs-target="#nav-compare" type="button" role="tab">
+                        <i class="fas fa-fist-raised me-2"></i>Comparar Héroes
+                    </button>
+                    <button class="nav-link" id="nav-ranking-tab" data-bs-toggle="tab" data-bs-target="#nav-ranking" type="button" role="tab">
+                        <i class="fas fa-trophy me-2"></i>Rankings
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="nav-tabContent">
+            <!-- Quiz Section -->
+            <div class="tab-pane fade show active" id="nav-quiz" role="tabpanel">
+                <div class="section-header text-center mb-5">
+                    <h2>Quiz Épico del MCU</h2>
+                    <p class="lead">Pon a prueba tu conocimiento sobre el Universo Cinematográfico de Marvel</p>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div id="quizContainer">
+                            <!-- Quiz content will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz Statistics -->
+                <div class="quiz-stats mt-5">
+                    <div class="row text-center">
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-number">1,247</div>
+                                <div class="stat-label">Quiz Completados</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-number">78%</div>
+                                <div class="stat-label">Promedio de Aciertos</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-number">456</div>
+                                <div class="stat-label">Fans Participando</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-number">92%</div>
+                                <div class="stat-label">Puntuación Máxima</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Character Comparison Section -->
+            <div class="tab-pane fade" id="nav-compare" role="tabpanel">
+                <div class="section-header text-center mb-5">
+                    <h2>Comparar Personajes</h2>
+                    <p class="lead">¿Quién ganaría en una batalla épica? Compara las estadísticas de tus héroes favoritos</p>
+                </div>
+                
+                <div id="comparisonContainer">
+                    <!-- Character comparison content will be loaded by JavaScript -->
+                </div>
+
+                <!-- Battle History -->
+                <div class="battle-history mt-5">
+                    <h3 class="text-center mb-4">
+                        <i class="fas fa-history text-warning me-2"></i>
+                        Batallas Recientes
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="battle-card">
+                                <div class="battle-result">
+                                    <span class="winner">🦾 Iron Man</span>
+                                    <span class="vs">VS</span>
+                                    <span class="loser">🕷️ Spider-Man</span>
+                                </div>
+                                <small class="text-muted">Hace 2 minutos</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="battle-card">
+                                <div class="battle-result">
+                                    <span class="winner">🔨 Thor</span>
+                                    <span class="vs">VS</span>
+                                    <span class="loser">💚 Hulk</span>
+                                </div>
+                                <small class="text-muted">Hace 5 minutos</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="battle-card">
+                                <div class="battle-result">
+                                    <span class="winner">🛡️ Capitán América</span>
+                                    <span class="vs">VS</span>
+                                    <span class="loser">🏹 Hawkeye</span>
+                                </div>
+                                <small class="text-muted">Hace 8 minutos</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rankings Section -->
+            <div class="tab-pane fade" id="nav-ranking" role="tabpanel">
+                <div class="section-header text-center mb-5">
+                    <h2>Rankings de Personajes</h2>
+                    <p class="lead">Descubre quiénes son los personajes más poderosos según nuestra comunidad</p>
+                </div>
+
+                <!-- Ranking Categories -->
+                <div class="ranking-categories mb-4">
+                    <div class="btn-group d-flex flex-wrap justify-content-center" role="group">
+                        <input type="radio" class="btn-check" name="rankingType" id="powerRanking" checked>
+                        <label class="btn btn-outline-primary" for="powerRanking">Poder General</label>
+
+                        <input type="radio" class="btn-check" name="rankingType" id="strengthRanking">
+                        <label class="btn btn-outline-danger" for="strengthRanking">Fuerza</label>
+
+                        <input type="radio" class="btn-check" name="rankingType" id="intelligenceRanking">
+                        <label class="btn btn-outline-success" for="intelligenceRanking">Inteligencia</label>
+
+                        <input type="radio" class="btn-check" name="rankingType" id="speedRanking">
+                        <label class="btn btn-outline-warning" for="speedRanking">Velocidad</label>
+                    </div>
+                </div>
+
+                <!-- Rankings List -->
+                <div class="rankings-container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div id="rankingsList">
+                                <!-- Top 3 Podium -->
+                                <div class="podium mb-5">
+                                    <div class="row align-items-end">
+                                        <div class="col-4 text-center">
+                                            <div class="podium-place second">
+                                                <div class="rank-character">🔨</div>
+                                                <div class="rank-name">Thor</div>
+                                                <div class="rank-position">2°</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                            <div class="podium-place first">
+                                                <div class="rank-character">💚</div>
+                                                <div class="rank-name">Hulk</div>
+                                                <div class="rank-position">1°</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                            <div class="podium-place third">
+                                                <div class="rank-character">🦾</div>
+                                                <div class="rank-name">Iron Man</div>
+                                                <div class="rank-position">3°</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Detailed Rankings -->
+                                <div class="ranking-list">
+                                    <div class="ranking-item">
+                                        <div class="rank-number">4</div>
+                                        <div class="rank-info">
+                                            <span class="rank-icon">🛡️</span>
+                                            <span class="rank-name">Capitán América</span>
+                                        </div>
+                                        <div class="rank-score">325/400</div>
+                                    </div>
+                                    <div class="ranking-item">
+                                        <div class="rank-number">5</div>
+                                        <div class="rank-info">
+                                            <span class="rank-icon">🕷️</span>
+                                            <span class="rank-name">Spider-Man</span>
+                                        </div>
+                                        <div class="rank-score">320/400</div>
+                                    </div>
+                                    <div class="ranking-item">
+                                        <div class="rank-number">6</div>
+                                        <div class="rank-info">
+                                            <span class="rank-icon">🏹</span>
+                                            <span class="rank-name">Hawkeye</span>
+                                        </div>
+                                        <div class="rank-score">285/400</div>
+                                    </div>
+                                    <div class="ranking-item">
+                                        <div class="rank-number">7</div>
+                                        <div class="rank-info">
+                                            <span class="rank-icon">🕷️</span>
+                                            <span class="rank-name">Black Widow</span>
+                                        </div>
+                                        <div class="rank-score">280/400</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Voting -->
+                <div class="community-voting mt-5">
+                    <div class="text-center">
+                        <h4>¿No estás de acuerdo con el ranking?</h4>
+                        <p class="text-muted">Participa en nuestras comparaciones para influir en los rankings</p>
+                        <button class="btn btn-primary" onclick="switchToComparison()">
+                            <i class="fas fa-vote-yea me-2"></i>
+                            Participar en Votación
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>MCU Universe</h5>
+                    <p>"Juntos somos más fuertes" - Tu comunidad Marvel favorita</p>
+                    <div class="slogan">
+                        <em>"El legado vive para siempre"</em>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Inicio</a></li>
+                        <li><a href="fans.html" class="text-light text-decoration-none">Zona Fans</a></li>
+                        <li><a href="theories.html" class="text-light text-decoration-none">Teorías</a></li>
+                        <li><a href="privacy.html" class="text-light text-decoration-none">Políticas de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank" class="text-light me-3">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-light me-3">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="text-light me-3">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-light me-3">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="text-light">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2024 MCU Universe. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <script>
+        // Switch to comparison tab function
+        function switchToComparison() {
+            const compareTab = document.getElementById('nav-compare-tab');
+            const comparePane = document.getElementById('nav-compare');
+            
+            // Remove active from current tab
+            document.querySelector('.nav-link.active').classList.remove('active');
+            document.querySelector('.tab-pane.active').classList.remove('active', 'show');
+            
+            // Activate comparison tab
+            compareTab.classList.add('active');
+            comparePane.classList.add('active', 'show');
+        }
+
+        // Initialize fans page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize quiz when quiz tab is active
+            initQuiz();
+        });
+    </script>
+
+    <style>
+        .fans-hero {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-blue) 100%);
+            padding: 8rem 0 4rem;
+            margin-top: 76px;
+        }
+
+        .fans-hero-icons {
+            font-size: 4rem;
+            opacity: 0.8;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .fans-navigation .nav-tabs {
+            border: none;
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 0.5rem;
+        }
+
+        .fans-navigation .nav-link {
+            border: none;
+            border-radius: 10px;
+            color: var(--gray-text);
+            font-weight: 600;
+            margin: 0 0.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .fans-navigation .nav-link.active {
+            background: var(--primary-red);
+            color: white;
+        }
+
+        .fans-navigation .nav-link:hover {
+            color: var(--primary-red);
+            background: var(--hover-bg);
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-red);
+        }
+
+        .stat-label {
+            color: var(--gray-text);
+            font-weight: 500;
+        }
+
+        .battle-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .battle-result {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .winner {
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+
+        .vs {
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        .loser {
+            color: var(--gray-text);
+        }
+
+        .ranking-categories {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .podium {
+            perspective: 1000px;
+        }
+
+        .podium-place {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .podium-place.first {
+            background: linear-gradient(45deg, var(--primary-gold), #f59e0b);
+            color: var(--darker-bg);
+            transform: scale(1.1);
+            border: 2px solid var(--primary-gold);
+        }
+
+        .podium-place.second {
+            background: linear-gradient(45deg, #9ca3af, #6b7280);
+            transform: scale(1.05);
+        }
+
+        .podium-place.third {
+            background: linear-gradient(45deg, #cd7f32, #a0522d);
+            transform: scale(1.02);
+        }
+
+        .rank-character {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .rank-name {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .rank-position {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .ranking-item:hover {
+            background: var(--hover-bg);
+            transform: translateX(5px);
+        }
+
+        .rank-number {
+            background: var(--primary-red);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .rank-info {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .rank-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .rank-score {
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+
+        .community-voting {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+    </style>
+</body>
+</html>

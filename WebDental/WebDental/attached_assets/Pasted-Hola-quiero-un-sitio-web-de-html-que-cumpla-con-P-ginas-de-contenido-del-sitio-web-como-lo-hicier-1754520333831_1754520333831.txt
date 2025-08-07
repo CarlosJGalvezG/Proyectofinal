@@ -1,0 +1,20 @@
+Hola quiero un sitio web de html que cumpla con:  (Páginas de contenido del sitio web como lo hicieron para su Proyecto de
+portafolio individual)
+• Página web principal (Home page)
+• Página web de políticas de privacidad
+• Página web de contactos que envíe correos y que contenga los íconos de las
+redes sociales que redireccionen a la respective red social. (X, Instagram,
+Facebook, linkedin, github)
+• Sección de noticias o de artículos donde se muestre información sobre el tema
+• Debe tener un Icono de la página
+• Metadatados para mejorar la búsqueda de internet
+• Barra de navegación
+• Headers, párrafos, imágenes responsivas
+• Un carrusel
+• Listas de Elementos
+• Que la página tenga su propio logo o frase con la que se identifique
+• Uso de estilos personalizados en un archivo .css separado del archivo .html
+• Uso de elementos JavaScript en un archivo .js separado del archivo .html
+• Que muestre alertas y modales donde se use JavaSript
+• Que tenga efectos en algunos elementos para que cambien de color/texto/fondo
+al pasar el mouse sobre el elemento. Que sea un sitio web, quiero las paginas separadas Quiero que tenga un estilo parecido a Netflix, quiero que genga un apartado de fans con quiz totalmente funcionales y divertidos, quiero que tambien haya uno para saber saber que personaje es mas fuerte, quiero teorias, quiero una página dedicada a los creadores, todos los metas, footer, header, quiero el modo oscuro con el corazon de stark, quiero que haya movimiento en la pagina principal, quiero que haya una linea de tiempo en el homepage, con informacion importante, quiero que contenga informacion relevantes de las peliculas, huiate de netflix para presentarlas, que las peliculas esten divididas por fases, que se vean tanto todas como por fases, quiero que haya pagina de terminos de privacidad, quiero que tenga información verdadera, paginas de noticias, los nuevos estrenos. Por favor hazme algo super diferente y dinamico, su paleta de color debe contener rojo que sea algo armonico con sus paleta

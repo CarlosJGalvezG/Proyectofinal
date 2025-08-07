@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCU Universe - Tu portal al Universo Cinematográfico de Marvel</title>
+    <meta name="description" content="El mejor sitio web de fans del MCU con teorías, quiz, rankings y todo sobre el Universo Cinematográfico de Marvel">
+    <meta name="keywords" content="MCU, Marvel, Avengers, Iron Man, Thor, Capitán América, teorías Marvel, quiz MCU">
+    <meta name="author" content="MCU Universe Team">
+    <meta property="og:title" content="MCU Universe - Portal de Fans del MCU">
+    <meta property="og:description" content="Descubre teorías, participa en quiz y explora el universo Marvel">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="home-page">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-meteor text-danger me-2"></i>
+                <span class="brand-text">MCU Universe</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies.html">Películas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="characters.html">Personajes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fans.html">Zona Fans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="theories.html">Teorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="creators.html">Creadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                </ul>
+                <div class="dark-mode-toggle">
+                    <button id="darkModeToggle" class="btn btn-link text-light">
+                        <i class="fas fa-heart text-danger arc-reactor"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-slide slide-1">
+                        <div class="carousel-content">
+                            <h1 class="display-3 fw-bold mb-4">Bienvenido al MCU Universe</h1>
+                            <p class="lead mb-4">"Con gran poder viene gran responsabilidad" - Y nosotros tenemos el poder del conocimiento Marvel</p>
+                            <a href="fans.html" class="btn btn-danger btn-lg me-3">Explorar Zona Fans</a>
+                            <a href="theories.html" class="btn btn-outline-light btn-lg">Ver Teorías</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-slide slide-2">
+                        <div class="carousel-content">
+                            <h1 class="display-3 fw-bold mb-4">Descubre Teorías Épicas</h1>
+                            <p class="lead mb-4">"La realidad puede ser lo que yo quiera" - Explora las teorías más fascinantes del MCU</p>
+                            <a href="theories.html" class="btn btn-primary btn-lg me-3">Ver Teorías</a>
+                            <a href="fans.html" class="btn btn-outline-light btn-lg">Quiz Marvel</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-slide slide-3">
+                        <div class="carousel-content">
+                            <h1 class="display-3 fw-bold mb-4">Únete a la Comunidad</h1>
+                            <p class="lead mb-4">"Avengers... ¡Reuníos!" - Conecta con otros fans del MCU</p>
+                            <a href="contact.html" class="btn btn-success btn-lg me-3">Contáctanos</a>
+                            <a href="creators.html" class="btn btn-outline-light btn-lg">Conoce al Equipo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <div class="floating-characters">
+            <div class="character character-1">🦾</div>
+            <div class="character character-2">🛡️</div>
+            <div class="character character-3">🔨</div>
+            <div class="character character-4">🕷️</div>
+            <div class="character character-5">💚</div>
+        </div>
+    </section>
+    
+    <main class="container my-5 pt-5">
+        <section class="features-section mb-5">
+            <h2 class="text-center mb-5">Explora el Universo Marvel</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain text-primary"></i>
+                        </div>
+                        <h4>Quiz Épicos</h4>
+                        <p>Pon a prueba tu conocimiento del MCU con nuestros quiz interactivos y desafiantes.</p>
+                        <a href="fans.html" class="btn btn-outline-primary">Jugar Ahora</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-fist-raised text-danger"></i>
+                        </div>
+                        <h4>Comparar Héroes</h4>
+                        <p>Descubre quién es más fuerte en épicas batallas entre tus personajes favoritos.</p>
+                        <a href="fans.html" class="btn btn-outline-danger">Comparar</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb text-warning"></i>
+                        </div>
+                        <h4>Teorías Marvel</h4>
+                        <p>Explora y comparte las teorías más fascinantes sobre el futuro del MCU.</p>
+                        <a href="theories.html" class="btn btn-outline-warning">Explorar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-preview mb-5">
+            <h2 class="text-center mb-5">Últimas Noticias Marvel</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <article class="news-card">
+                        <h5>Nuevas Películas del MCU en 2024</h5>
+                        <p>Descubre qué nos depara el futuro del Universo Cinematográfico de Marvel...</p>
+                        <small class="text-muted">Hace 2 días</small>
+                    </article>
+                </div>
+                <div class="col-md-6">
+                    <article class="news-card">
+                        <h5>Teorías sobre los X-Men en el MCU</h5>
+                        <p>¿Cuándo veremos a los mutantes en el MCU? Analizamos las pistas...</p>
+                        <small class="text-muted">Hace 1 semana</small>
+                    </article>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="news.html" class="btn btn-primary">Ver Todas las Noticias</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>MCU Universe</h5>
+                    <p>"Juntos somos más fuertes" - Tu comunidad Marvel favorita</p>
+                    <div class="slogan">
+                        <em>"El legado vive para siempre"</em>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Inicio</a></li>
+                        <li><a href="fans.html" class="text-light text-decoration-none">Zona Fans</a></li>
+                        <li><a href="theories.html" class="text-light text-decoration-none">Teorías</a></li>
+                        <li><a href="privacy.html" class="text-light text-decoration-none">Políticas de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank" class="text-light me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="text-light me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="text-light me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="text-light me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="https://github.com" target="_blank" class="text-light"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2024 MCU Universe. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
